@@ -11,12 +11,12 @@ export default function Header(props) {
   return (
     <header className={`${props.mode === 'light' ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'} `}>
       <nav className='flex justify-between p-6 items-baseline'>
-        <div className="logo">
+        <div className="logo cursor-pointer">
           <span className='text-2xl'>{props.logoText}</span>
         </div>
         <ul className='flex gap-7 basis-8/12 font-bold'>
-          <li className=''><a href="">{props.menuItem1}</a></li>
-          <li className=''><a href="">{props.menuItem2}</a></li>
+          <li className='cursor-pointer'>{props.menuItem1}</li>
+          {/* <li className=''>{props.menuItem2}</li> */}
           {/* <li className=''><a href="/">{props.menuItem3}</a></li> */}
         </ul>        
         <div>

@@ -9,7 +9,7 @@ Header.defaultProps = {
 
 export default function Header(props) {
   return (
-    <header className={`${props.mode === 'light' ? 'bg-gray-300 text-black' : 'bg-gray-900 text-white'} `}>
+    <header className={`${props.mode === 'light' ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'} `}>
       <nav className='flex justify-between p-6 items-baseline'>
         <div className="logo">
           <span className='text-2xl'>{props.logoText}</span>

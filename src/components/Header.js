@@ -14,7 +14,7 @@ export default function Header(props) {
         <div className="logo cursor-pointer">
           <span className='text-2xl'>{props.logoText}</span>
         </div>
-        <ul className='flex gap-7 basis-8/12 font-bold'>
+        <ul className='flex gap-7 md:basis-8/12 font-bold'>
           <li className='cursor-pointer'>{props.menuItem1}</li>
           {/* <li className=''>{props.menuItem2}</li> */}
           {/* <li className=''><a href="/">{props.menuItem3}</a></li> */}

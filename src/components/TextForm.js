@@ -52,22 +52,22 @@ export default function TextForm(props) {
     }
     const [text, setText] = useState("");
   return (
-    <div className={`w-3/4 mx-auto  ${props.mode==='light'?'text-black':'text-white'}`} >
+    <div className={`w-11/12 md:w-3/4 mx-auto  ${props.mode==='light'?'text-black':'text-white'}`} >
         
-        <h1 className='text-3xl font-semibold my-5 mr-4 inline-block'>{props.heading}</h1>
-        <span className='my-3 text-xl font-semibold'>{text.length>0?props.thanksTitle:" "} </span>
+        <h1 className='text-2xl font-semibold my-5 mr-4 md:inline-block'>{props.heading}</h1>
+        <span className='block text-center md:inline my-3 text-xl font-semibold'>{text.length>0?props.thanksTitle:" "} </span>
         <textarea className={`border border-gray-400 resize-none w-full ${props.mode==='light'?'bg-white text-black':'bg-gray-900 text-white'}`} value={text} id="textForm" cols="50" rows="5" onChange={handleOnChange}></textarea>
-        <div>
-        <button onClick={handleUpClick} className='bg-blue-600 py-2 px-5 mx-2 text-white rounded-md'>Convert to uppercase</button>
+        <div className='flex gap-4 flex-wrap mt-4'>
+        <button onClick={handleUpClick} className='bg-blue-600 py-2 px-5  text-white rounded-md'>Convert to uppercase</button>
 
-        <button onClick={handleLowerClick} className='bg-blue-600 py-2 px-5 mx-2 text-white rounded-md'>Convert to lowercase</button>
+        <button onClick={handleLowerClick} className='bg-blue-600 py-2 px-5  text-white rounded-md'>Convert to lowercase</button>
 
         <button onClick={handleWhiteSpace} className='bg-blue-600 py-2 px-5 text-white rounded-md'>Remove white space</button>
 
-        <button onClick={handleClearText} className='bg-blue-600 py-2 px-5 mx-2 text-white rounded-md'>Clear Text</button>
-        <button onClick={handleCopyText} className='bg-blue-600 py-2 px-5 mx-2 text-white rounded-md'>Copy Text</button>
+        <button onClick={handleClearText} className='bg-blue-600 py-2 px-5  text-white rounded-md'>Clear Text</button>
+        <button onClick={handleCopyText} className='bg-blue-600 py-2 px-5  text-white rounded-md'>Copy Text</button>
         </div>
-       <div className='my-8'>
+       <div className='my-4 md:my-8'>
             <h1 className='text-3xl font-semibold'>Text Summary</h1>
             <div className=''>
                 <span className='font-medium text-base mr-4'>{text.split(" ").length} Words</span> 

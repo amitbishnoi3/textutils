@@ -41,10 +41,8 @@ export default function TextForm(props) {
         setText("");        
     }
     const handleCopyText = () => {
-        let text = document.getElementById('textForm');
-        text.select();
-        navigator.clipboard.writeText(text.value);
-        if(text.value.length>0){
+        navigator.clipboard.writeText(text);
+        if(text.length>0){
             props.showAlert("Text copied","Success");
         }else{
             props.showAlert("Nothing to copy","Warning");
@@ -70,7 +68,7 @@ export default function TextForm(props) {
        <div className='my-4 md:my-8'>
             <h1 className='text-3xl font-semibold'>Text Summary</h1>
             <div className=''>
-                <span className='font-medium text-base mr-4'>{text.split(" ").length} Words</span> 
+                <span className='font-medium text-base mr-4'>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Words</span> 
                 <span className='font-medium text-base'>{text.length} Characters</span>
                 {/* <p> {0.08 * text.split(" ").length}Mins to read</p> */}
                 <h2 className='my-3 text-2xl font-medium'>Preview</h2>
